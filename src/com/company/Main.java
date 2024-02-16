@@ -1,11 +1,12 @@
 package com.company;
 
 import com.company.employee.*;
+import com.company.ship.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        // INHERITANCE PORTION //
+        // INHERITANCE //
 
         SalariedEmployee joeJones = new SalariedEmployee();
         HourlyEmployee stephanieSmith = new HourlyEmployee();
@@ -66,9 +67,30 @@ public class Main {
         printEmployeeInfo(mikeDavenport);
         printEmployeeInfo(mahnazVaziri);
 
-        System.out.println();
-
         // INHERITANCE END //
+
+
+
+        // POLYMORPHISM //
+
+        Ship[] ships = new Ship[3];
+
+        ships[0] = new Ship("Gigantic", 1989);
+        ships[1] = new CruiseShip("Titanic", 1958, 2000);
+        ships[2] = new CargoShip("Atlantic", 2010, 5000);
+
+        System.out.println("\nPOLYMORPHISM");
+        for (Ship ship : ships) {
+            ship.printShipInfo();
+        }
+
+        // POLYMORPHISM END //
+
+
+
+        // AGGREGATION //
+
+        // AGGREGATION END //
     }
 
     private static void printEmployeeInfo(Employee employee) {
