@@ -3,6 +3,11 @@ package com.company.ship;
 public class CruiseShip extends Ship {
     private int maxPassengers;
 
+    public CruiseShip(){
+        this("N/A", -1, -1);
+    }
+
+
     public CruiseShip(String name, int yearBuilt, int maxPassengers) {
         super(name, yearBuilt);
         this.maxPassengers = maxPassengers;
